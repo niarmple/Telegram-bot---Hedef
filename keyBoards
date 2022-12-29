@@ -1,0 +1,149 @@
+function send() {
+  let chat_id = "1065951774";
+  let text = "Привет!";
+  sendText(chat_id, text, REPLY);
+}
+
+function hedef_info(chat_id) {
+  let text = "✨    ✨    ✨    Hedef    ✨    ✨    ✨\n\n"+"       инстаграм     баракчалары";
+  sendText(String(chat_id), text, URL_KEYBOARD2);
+}
+
+function sendButtons(chat_id, text) {
+  sendText(String(chat_id), text, CUSTOM_KEYBOARD_4);
+}
+
+let CUSTOM_KEYBOARD = {
+  "keyboard": [
+    [{ "text": "Кнопка 1" }, { "text": "Кнопка 2" }]
+  ]
+};
+
+let CUSTOM_KEYBOARD2 = {
+  "keyboard": [
+    [{ "text": "Кнопка 1" }, { "text": "Кнопка 2" }]
+  ],
+  "resize_keyboard": true
+};
+
+let CUSTOM_KEYBOARD3 = {
+  "keyboard": [
+    [{ "text": "Кнопка 1" }, { "text": "Кнопка 2" }],
+    [{ "text": "Кнопка 3" }, { "text": "Кнопка 4" }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true
+};
+
+let CUSTOM_KEYBOARD4 = {
+  "keyboard": [
+    [{ "text": "Кнопка 1" }, { "text": "Кнопка 2" }],
+    [{ "text": "Кнопка 3" }, { "text": "Кнопка 4" }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true,
+  "input_field_placeholder": "Текст - подсказка"
+};
+
+let CUSTOM_KEYBOARD_4 = {
+  "keyboard": [
+    [{ "text": "/start" }, { "text": "/top10" }],
+    [{ "text": "/goto" }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": false,
+  "input_field_placeholder": "@инстаграм-аккаунтуңуз "
+};
+
+let CUSTOM_KEYBOARD5 = {
+  "keyboard": [
+    [{ "text": "Кнопка 1 ❤️" }, { "text": "Кнопка 2 ✨" }],
+    [{ "text": "Кнопка 3 🆗" }, { "text": "Кнопка 4 🔥" }, { "text": "Кнопка 5 ✔️" }],
+    [{ "text": "Кнопка 6 ❤️‍🔥" }, { "text": "Кнопка 7 🏁" }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true,
+};
+
+let REMOVE_KEYBOARD = {
+  remove_keyboard: true
+};
+
+let PHONE_No = {
+  "keyboard": [
+    [{ "text": "Отправить номер ☎️️", 'request_contact': true }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true
+};
+
+let LOCATION_KEYBOARD = {
+  "keyboard": [
+    [{ "text": "Отправить местоположение 🗺️️", 'request_location': true }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true
+};
+
+let POLL_KEYBOARD = {
+  "keyboard": [
+    [{ "text": "Опрос", 'request_poll': {} }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true
+};
+
+let POLL_KEYBOARD2 = {
+  "keyboard": [
+    [{ "text": "Опрос", 'request_poll': { type: "quiz" } }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true
+};
+
+let POLL_KEYBOARD3 = {
+  "keyboard": [
+    [{ "text": "Опрос", 'request_poll': { type: "regular" } }]
+  ],
+  "resize_keyboard": true,
+  "one_time_keyboard": true
+};
+
+let INLINE = {
+  "inline_keyboard": [
+    [{ "text": "Топ-10 окуучу", 'callback_data': "/start" }, { "text": "Кнопка 2", 'callback_data': "Кнопка 2" }],
+    [{ "text": "Кнопка 3", 'callback_data': "Кнопка 3" }, { "text": "Кнопка 4", 'callback_data': "Кнопка 4" }, { "text": "Кнопка 5", 'callback_data': "Кнопка 5" }],
+    [{ "text": "Кнопка 6", 'callback_data': "Кнопка 6" }, { "text": "Кнопка 7", 'callback_data': "Кнопка 7" }]
+  ]
+};
+
+let URL_KEYBOARD = {
+  "inline_keyboard": [
+    [{ "text": "Проверить почту", 'url': "mail.ru" }]
+  ]
+};
+
+let URL_KEYBOARD2 = {
+  "inline_keyboard": [
+    [{ "text": "Hedef - башкы баракча", 'url': "https://www.instagram.com/hedef.kg/" }],
+    [{ "text": "Hedef - сабактар", 'url': "https://www.instagram.com/project.hedef/" }]
+  ]
+};
+
+let SWITCH_INLINE = {
+  "inline_keyboard": [
+    [{ "text": "Кнопка 1", 'switch_inline_query_current_chat': 'мой текст' }, { "text": "Кнопка 2", 'callback_data': "Кнопка 2" }]
+  ]
+};
+
+let FORCE_REPLY = {
+  "force_reply": true,
+  "input_field_placeholder": "Ушул жерге инстаграм жазыныз"
+};
+
+let REPLY = {
+  "input_field_placeholder": "Ушул жерге инстаграм жазыныз"
+};
+
+
+
