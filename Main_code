@@ -1,0 +1,326 @@
+const token = "YOUR_TOKEN";
+const webAppUrl = "https://script.google.com/macros/s/AKfycbzC6FDB39_2RroWn_QsGw7vdlK4bBu9rNo61KHlTF6KD3sWrOM-QQrGZuMG-Grg294OLw/exec";
+const sheet_ID = "1DpsuQxmXxBifsbwZEeOfTgRC9HuxolJVM22uW7peokg";
+
+
+
+function send1() {
+  let chat_id = "1065951774";
+  let text = "Привет!";
+  sendText(chat_id, text, INLINE);
+}
+
+function getMe() {
+  let response = UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/getMe");
+  console.log(response.getContentText());
+}
+
+function setWebhook() {
+  let response = UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/setWebhook?url=" + webAppUrl);
+  console.log(response.getContentText());
+}
+
+function sendStickerHello(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAICTmOsuMT-RZfQ1d3rEnGWjkyTEcesAAIPAQACK15TC2YdSecaSDtELAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerTop10list(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgQAAxkBAAIBh2OspyBGymja01LS57ybHTnPEqWfAAKKAANLae4QHxy8H5pC3uAsBA"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerTop1(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAIB0WOsq7N4GAsN2cCZ6rG5xRGyt-Q_AAKACAACeVziCZk23NUWGoEfLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerTop2(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAIB6GOsrqNa86pgl1oapcj424E_NctqAAK-BQACP5XMCpuPAohdSwctLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerTop3(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAIB9mOssIBCzxA37dvQqMTY_t6JYYsXAAISAQACHwFMFcgZ7-PMPxRxLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerTop10(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAICE2OstAFjamzf4ajdWIKmk4PaUytSAAIRAQACK15TC0jIqJn0LWRzLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerToplist(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgQAAxkBAAICHmOstH24i1YqoNLBVn6SudgCZWp8AAKGAANLae4QCta2xEWLBYksBA"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerInstaNotFound(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAICwGOsxgLfz8TcOMS6usubM6CihN2BAALeBQACP5XMCm8QP_nF3QwXLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerCommandNotFound(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAIDCWOsy-QxrbWM85BtCDfiRjNuS_EkAAK1CAACCLcZAkOd6IRiirFULAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerDoesntExistWord(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAIDEGOszEPKa_IMt6vSpO7U5PlmUoYQAALPCAACCLcZAmRX7jsiQd-mLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendStickerInfo(chat_id) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendSticker",
+      chat_id: String(chat_id),
+      sticker: "CAACAgIAAxkBAAIDh2OszlDSCoqU6PowLNfZ3BHtxVSmAALUDAACeougSJ4vIiSUM7ybLAQ"
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function sendText(chat_id, text, keyBoard) {
+  let data = {
+    method: "post",
+    payload: {
+      method: "sendMessage",
+      chat_id: String(chat_id),
+      text: text,
+      parse_mode: "HTML",
+      reply_markup: JSON.stringify(keyBoard)
+    }
+  };
+  UrlFetchApp.fetch("https://api.telegram.org/bot" + token + "/",data);
+}
+
+function send123(){
+  let chat_id = 1065951774;
+  let text = "Привет, Али!";
+  sendText(chat_id, text);
+}
+
+
+
+function answerCommand(command) {
+  let sheetCommands = SpreadsheetApp.openById(sheet_ID).getSheetByName("results");
+  let lastRow = sheetCommands.getLastRow();
+
+  if (lastRow > 1) {
+    let commandsArray = sheetCommands.getRange(3, 8, lastRow - 1).getValues().flat();
+    let commandRow = commandsArray.indexOf(command) + 3;
+    if (commandRow > 2) {
+      let answer = sheetCommands.getRange(commandRow, 6, 6, 4).getValues();
+      return answer;
+    }
+    else {
+      return false;
+    }
+  }
+  else {
+    return false;
+  }
+}
+
+function rating10(chat_id){
+  let sheetCommands = SpreadsheetApp.openById(sheet_ID).getSheetByName("results");
+  let answer = sheetCommands.getRange(3, 6, 10, 4).getValues();
+
+        sendText(chat_id, answer[0][0].toString().padEnd(3," ") + " 🔸 " + answer[0][1] + "\n"
+         + answer[0][2] + " : " + answer[0][3] + " балл\n"
+                        + answer[1][0].toString().padEnd(3," ") + " 🔸 " + answer[1][1] + "\n"
+         + answer[1][2] + " : " + answer[1][3] + " балл\n"
+                        + answer[2][0].toString().padEnd(3," ") + " 🔸 " + answer[2][1] + "\n"
+         + answer[2][2] + " : " + answer[2][3] + " балл\n"
+                        + answer[3][0].toString().padEnd(3," ") + " 🔸 " + answer[3][1] + "\n"
+         + answer[3][2] + " : " + answer[3][3] + " балл\n"
+                        + answer[4][0].toString().padEnd(3," ") + " 🔸 " + answer[4][1] + "\n"
+         + answer[4][2] + " : " + answer[4][3] + " балл\n"
+                        + answer[5][0].toString().padEnd(3," ") + " 🔸 " + answer[5][1] + "\n"
+         + answer[5][2] + " : " + answer[5][3] + " балл\n"
+                        + answer[6][0].toString().padEnd(3," ") + " 🔸 " + answer[6][1] + "\n"
+         + answer[6][2] + " : " + answer[6][3] + " балл\n"
+                        + answer[7][0].toString().padEnd(3," ") + " 🔸 " + answer[7][1] + "\n"
+         + answer[7][2] + " : " + answer[7][3] + " балл\n"
+                        + answer[8][0].toString().padEnd(3," ") + " 🔸 " + answer[8][1] + "\n"
+         + answer[8][2] + " : " + answer[8][3] + " балл\n"
+                        + answer[9][0].toString().padEnd(3," ") + " 🔸 " + answer[9][1] + "\n"
+         + answer[9][2] + " : " + answer[9][3] + " балл\n"
+         );
+
+}
+
+function rating(chat_id, text){
+  let answer = answerCommand(text);
+      if (answer) {
+        if (answer[0][0] === 1){
+            sendStickerTop1(chat_id);
+            sendText(chat_id, "✨  ✨  ✨  Баракелде!  ✨  ✨  ✨");
+        }
+        else if (answer[0][0] === 2) {
+            sendStickerTop2(chat_id);
+            sendText(chat_id, "✨  ✨  ✨  Сооонун!  ✨  ✨  ✨");
+        }
+        else if (answer[0][0] === 3) {
+            sendStickerTop3(chat_id);
+            sendText(chat_id, "✨  ✨  ✨  Укмуш!  ✨  ✨  ✨");
+        }
+        else if (answer[0][0] < 11) {
+            sendStickerTop10(chat_id);
+            sendText(chat_id, "✨  ✨  ✨  Мыкты!  ✨  ✨  ✨");
+        }
+        else{
+            sendStickerToplist(chat_id);
+            sendText(chat_id, "✨  ✨  ✨  Азамат!  ✨  ✨  ✨");
+        }
+        
+        sendText(chat_id, answer[0][0].toString().padEnd(3," ") + " 🔹 " + answer[0][1] + "\n"
+         + answer[0][2] + " : " + answer[0][3] + " балл\n"
+                        + answer[1][0].toString().padEnd(3," ") + " 🔹 " + answer[1][1] + "\n"
+         + answer[1][2] + " : " + answer[1][3] + " балл\n"
+                        + answer[2][0].toString().padEnd(3," ") + " 🔹 " + answer[2][1] + "\n"
+         + answer[2][2] + " : " + answer[2][3] + " балл\n"
+                        + answer[3][0].toString().padEnd(3," ") + " 🔹 " + answer[3][1] + "\n"
+         + answer[3][2] + " : " + answer[3][3] + " балл\n"
+                        + answer[4][0].toString().padEnd(3," ") + " 🔹 " + answer[4][1] + "\n"
+         + answer[4][2] + " : " + answer[4][3] + " балл\n"
+                        + answer[5][0].toString().padEnd(3," ") + " 🔹 " + answer[5][1] + "\n"
+         + answer[5][2] + " : " + answer[5][3] + " балл\n");
+      }
+      else{
+        sendStickerInstaNotFound(chat_id);
+        sendText(chat_id, text + " - инстаграм аккаунту табылган жок!");
+      }
+
+}
+
+function adc(){
+  let text1 = "@sfioue".slice(1);
+  console.log(text1);
+}
+
+function doPost(e){
+  let contents = JSON.parse(e.postData.contents);
+  let chat_id = contents.message.chat.id;
+  let text = contents.message.text;
+  SpreadsheetApp.openById(sheet_ID).getSheetByName("Debug").getRange(1, 1).setValue(JSON.stringify(contents, null, 5));
+  
+
+  if ((/^\@/.exec(text))){
+      let text1 = text.slice(1);
+      rating(chat_id, text1);
+  }
+  else if ((/^\//.exec(text))){
+    if (text === "/start"){
+      sendStickerHello(chat_id);
+      sendButtons(chat_id, '⭐️   ⭐️   ⭐️   Салам!   ⭐️   ⭐️   ⭐️\n\n'
+                        +'Өзүңүздүн баллыңызды\n'
+                        +'билгиңиз келсе инстаграм\n'
+                        +'аккаунтуңузду жазыңыз!\n\n'
+                        +'Мисалы: @kanke1dieva_01_\n'
+                        +'@_aruuke.00_\n'
+                        +'@talgat.anarbekovich\n'
+                        +'@samiraaj13\n'
+                        +'@Akkulovva_m\n')
+      // sendText(chat_id, '⭐️   ⭐️   ⭐️   Салам!   ⭐️   ⭐️   ⭐️\n\n'
+      //                   +'Өзүңүздүн баллыңызды\n'
+      //                   +'билгиңиз келсе инстаграм\n'
+      //                   +'аккаунтуңузду жазыңыз!\n\n'
+      //                   +'Мисалы: @kanke1dieva_01_\n'
+      //                   +'@_aruuke.00_\n'
+      //                   +'@talgat.anarbekovich\n'
+      //                   +'@samiraaj13\n'
+      //                   +'@Akkulovva_m\n'
+      //                   );
+    }
+    else if (text === "/top10"){
+      sendStickerTop10list(chat_id);
+      sendText(chat_id, "😍  Эң мыкты окуучуларыбыз!!!  😍\n"+"⬇️    ⬇️    ⬇️    ⬇️    ⬇️    ⬇️    ⬇️");
+      rating10(chat_id);
+    }
+    else if (text === "/goto"){
+      sendStickerInfo(chat_id)
+      hedef_info(chat_id);
+    }
+    else {
+        sendStickerCommandNotFound(chat_id);
+        sendText(chat_id, text + " - командасы табылган жок!");
+    
+    }
+  } else{
+     sendStickerDoesntExistWord(chat_id);
+     sendText(chat_id,"Балким, туура сөз жазыш керек....");
+  }
+}
